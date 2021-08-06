@@ -89,7 +89,8 @@ section {
 
 <script type="text/javascript">
   $(document).on('submit','#post-form',function(e){
-    e.preventDefault();
+      //{% comment %} page does not reload {% endcomment %}
+    e.preventDefault(); 
 
     $.ajax({
       type:'POST',
