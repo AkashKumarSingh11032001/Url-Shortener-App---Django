@@ -9,7 +9,7 @@ def index(request):
 
 def create(request):
     if request.method == 'POST':
-        
+
         link = request.POST['link']
         uid = str(uuid.uuid4())[:5]
 
@@ -18,3 +18,8 @@ def create(request):
         new_url.save()
 
         return HttpResponse(uid)
+
+
+def go(request, pk):
+    url_details = Url.objects.get(uuid=pk)
+    return redirect('https://'+url_details.link)
