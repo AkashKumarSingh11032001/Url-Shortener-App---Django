@@ -87,7 +87,7 @@ section {
   
   <div class="buttons">
     {% comment %} <button type="submit" id="shorten">Shorten</button> {% endcomment %}
-    <button type="submit" id="shorten" class="w3-button w3-block">Shorten</button>
+    <button type="submit" id="shorten" class="w3-button w3-block" ><b>Shorten</b> </button>
     
   </div>
   </form>
@@ -109,7 +109,7 @@ section {
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        $('h2').html("akash/"+data)
+        $('h2').html("localhost:8000/"+data)
       }
     });
   });
